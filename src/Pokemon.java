@@ -13,7 +13,7 @@ public abstract class Pokemon {
 		this.niveau = new Random().nextInt(1, 11);
 		this.hp = 2 * this.niveau;
 		this.atk = (this.niveau / 2) + 1;
-		//this.typePokemon = TypePokemon.EAU;
+		this.type = type;
 	}
 	
 	public String getNom() {
@@ -44,7 +44,7 @@ public abstract class Pokemon {
 		this.hp = 2 * this.niveau;
 	}
 	
-	public abstract void attaquer(Pokemon0 p);
+	public abstract void attaquer(Pokemon p);
 	
 	public String toString() {
 		String msg =  "[Pokemon "+this.nom+"] :"+"Je m'appelle "+this.nom+ "! \n"+ "je suis de niveau "+this.niveau+"\n"+"j'ai "+this.hp+" points de vie\n"+"mon attaque de base est de "+this.atk;
@@ -55,7 +55,7 @@ public abstract class Pokemon {
 		System.out.println(msg);
 	}
 	
-	public abstract void subir(Pokemon0 p);
+	public abstract void subir(Pokemon p);
 	
 	public TypePokemon getType() {
 		return this.type;
